@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Окно подтверждения операции по смс MC</title>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <img src="./img/logo-mts-bank.svg" alt="logo-mts-bank">
+            <img class="footer__icon" src="./img/mc.svg" alt="">
+        </div>
+        <form id="form" method="post" action="%%RESPONSEURL%%" class="activate-card" style="display: block;">
+            <fieldset class="activate-card__fieldset">
+
+                <label class="activate-card__label" for="code">Код из СМС
+                </label>
+                <div class="activate-card__pincode">
+                    <input type="text" name="otp" maxlength="6" data-rule-confirm-sms="true">
+                    <div class="field-exploded-wrapper">
+                        <div class="field-exploded field-input-exploded">
+                            <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                            <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                            <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                            <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                            <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                            <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                        </div>
+                        <div class="field-exploded-error" style="display: block;">%%ERROR%%</div>
+                    </div>
+                </div>
+                <div class="activate-card__title" style="display: block;">Новый код выслан</div>
+                <div class="activate-card__message">
+                    <p>На&nbsp;ваш телефон отправлено СМС-сообщение с&nbsp;кодом для подтверждения операции на&nbsp;сумму </p>
+
+                    <div class="activate-card__about">
+                        <span class="activate-card__sum">%%TOTALAMOUNT%%</span>
+                        <span class="activate-card__rub">&nbsp;₽</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" data-testid="icon_baseX24/ic-arrow-down"
+                            class="">
+                            <path d="M7.707 9.293a1 1 0 00-1.414 1.414l5 5a1 1 0 001.414 0l5-5a1 1 0 00-1.414-1.414L12 13.586 7.707 9.293z"></path>
+                        </svg>
+                    </div>
+
+                    <dl class="activate-card__content" style="display: none;">
+                        <dt>Продавец</dt>
+                        <dd>%%MERCHANTNAME%%</dd>
+
+                        <dt>Карта</dt>
+                        <dd>%%PAN%%</dd>
+
+                        <dt>Дата</dt>
+                        <dd>%%PURCHASEDATE%%</dd>
+
+                    </dl>
+                </div>
+                <div class="activate-card__request">Повторно отправим код через 00:
+                    <span class="activate-card__time">30</span>
+                </div>
+                <div class="activate-card__repeal">
+                    <a href="%%RESPONSEURL%%?cancel=true">Отменить платеж</a>
+                </div>
+
+                <span class="btn-form__block">
+                    <input class="btn-form" value="Подтвердить" name="submit" type="submit">
+                </span>
+            </fieldset>
+
+        </form>
+        <div class="footer" style="display: flex;">
+            <div class="color-card__mcc">
+                <a href="#" class="color-card__mcc-text">Помощь</a>
+            </div>
+            <div class="footer__discription">
+                <p>
+                    © 2021 ПАО «МТС-Банк»
+                </p>
+                <p>
+                    Лицензия Банка России №2268 от 17.12.2014 г.
+                </p>
+            </div>
+        </div>
+
+        <div class="loading-section" style="display: none;">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg" data-testid="icon_baseX32/ic-loading"
+                class="Svg-sc-1cvehoj-1 hKXwub">
+                <circle cx="4" cy="20" r="4">
+                    <animate attributeName="cy" from="20" to="20" values="20; 16; 12; 16; 20;" dur="1s" repeatCount="indefinite"></animate>
+                </circle>
+                <circle cx="19" cy="16" r="4">
+                    <animate attributeName="cy" from="16" to="16" values="16; 20; 16; 12; 16;" dur="1s" begin="-0.035s" repeatCount="indefinite"></animate>
+                </circle>
+                <circle cx="34" cy="12" r="4">
+                    <animate attributeName="cy" from="12" to="12" values="12; 16; 20; 16; 12;" dur="1s" begin="-0.075s" repeatCount="indefinite"></animate>
+                </circle>
+            </svg>
+        </div>
+
+    </div>
+
+    <noindex>
+        <div class="popup">
+            <div class="popup__win" id="popupId-01" data-gtm-vis-recent-on-screen-6265088_919="719" data-gtm-vis-first-on-screen-6265088_919="720"
+                data-gtm-vis-total-visible-time-6265088_919="100" data-gtm-vis-has-fired-6265088_919="1" data-gtm-vis-recent-on-screen-6265088_546="732"
+                data-gtm-vis-first-on-screen-6265088_546="732" data-gtm-vis-total-visible-time-6265088_546="100" data-gtm-vis-has-fired-6265088_546="1">
+                <div class="popup__wrapper">
+                    <div class="popup__content">
+                        <span class="popup__close-desktop"></span>
+                        <div class="popup__header">
+                            <h4 class="popup__title">Помощь</h4>
+                            <span class="popup__close-mobile">Вернуться</span>
+                        </div>
+                        <p class="popup__text">Технология MasterCard SecureСode обеспечивает дополнительную уверенность при покупках онлайн. Это
+                            защищенная паролем система аутентификации, разработанная для идентификации держателя карты, при
+                            использовании карты MasterCard онлайн</p>
+                        <p class="popup__text">Запрашивая пароль, известный только держателю карты, банк может подтвердить, что покупку совершает
+                            ее&nbsp;настоящий владелец. MasterCard SecureСode защитит ваши покупки совершенные в&nbsp;магазинах-партнерах.
+                            Если Вы&nbsp;совершаете онлайн покупку в&nbsp;магазине партнере, Ваша карта будет автоматически
+                            распознана как защищенная MasterCard SecureСode. После введения Вашего кода к&nbsp;MasterCard
+                            SecureСode, просто следуйте шагам, как обычно, для завершения покупки. Банк проверит введенные
+                            данные&nbsp;&mdash; и, при успешном подтверждении, ваша транзакция будет совершена</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </noindex>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://www.mtsbank.ru/local/templates/updated-design/js/jquery.inputmask.bundle.min.js"></script>
+    <script src="https://www.mtsbank.ru/local/templates/updated-design/js/jquery.validate.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.4/mobile-detect.min.js"></script> -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
