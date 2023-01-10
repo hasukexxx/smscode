@@ -1,0 +1,61 @@
+.field-exploded-wrapper {
+    font-family: "MTS Sans", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    padding-bottom: 16px
+  }
+  
+  .field-exploded-wrapper .field-exploded input.error {
+    border-color: #E06400!important;
+  }
+  
+  .field-exploded-wrapper .field-exploded-error {
+    // position: absolute;
+    text-align: center;
+    bottom: 0;
+    font-size: 14px;
+    color: #E06400;
+    line-height: 1.43em;
+    margin-top: 32px;
+    font-weight: 500;
+    margin-bottom: -16px;
+  }
+  
+  .field-exploded-wrapper .field-input-exploded {
+    display: flex;
+    position: relative;
+    justify-content: center;
+  }
+  
+  .field-exploded-wrapper .field-input-exploded input[type=text],
+  .field-exploded-wrapper .field-input-exploded input[type=password] {
+    text-align: center;
+    width: 32px;
+    white-space: nowrap;
+    overflow: visible;
+    line-height: 1.4em;
+    font-size: 20px;
+    height: 45px;
+    background: #ffffff;
+    border: none;
+    border-bottom: 1px solid #E2E5EB;
+    color: #000;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    margin-bottom: 0;
+    margin-right: 12px;
+    outline: none;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 17px;
+
+    &:focus {
+      border-bottom: 1px solid #000;
+    }
+  }
+  
+  .field-exploded-wrapper .field-input-exploded .is-filled {
+    border-color: #000 !important
+  }

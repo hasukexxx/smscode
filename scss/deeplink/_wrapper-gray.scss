@@ -1,0 +1,19 @@
+.wrapper-gray {
+  background-color: #F2F3F7;
+  padding: 24px 16px;
+  border: none;
+
+  @media only screen and (min-width: 768px) {
+    padding: 32px 152px;
+    border: 1px solid #E9ECEF;
+    border-bottom: none;
+  }
+
+  @media only screen and (min-width: 1360px) {
+    padding: 32px 200px;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    padding: 32px 224px;
+  }
+}

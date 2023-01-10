@@ -1,0 +1,34 @@
+.wrapper {
+  width: 100%;
+  margin: 0px auto 0px auto;
+  border: 1px solid #F0F0F0;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (min-width: $m768) {
+    max-width: 744px;
+    margin: 17px auto 0px auto;
+    height: auto;
+    position: inherit;
+  }
+
+  img {
+    display: block;
+    
+  }
+}
+
+.hasPadding {
+  @include padding-LR;
+}
+
+a {
+  color: #007DBB;
+
+
+  &:hover {
+    color: $color-blue-300;
+  }
+}
